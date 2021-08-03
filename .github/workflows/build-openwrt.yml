@@ -73,6 +73,12 @@ jobs:
 
     - name: Install feeds
       run: cd openwrt && ./scripts/feeds install -a
+      
+    - name: Download New feeds
+      run: cd openwrt && rm -rf feeds.conf.default && wget https://raw.githubusercontent.com/RanDengShiFu/OpenWrt-DIY/main/feeds.conf.default
+
+    - name: Update New feeds
+      run: cd openwrt && ./scripts/feeds update -a &&./scripts/feeds install -a
 
     - name: Load custom configuration
       run: |
