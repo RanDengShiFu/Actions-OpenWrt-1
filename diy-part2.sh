@@ -14,5 +14,5 @@
 sed -i 's/192.168.1.1/192.168.222.1/g' package/base-files/files/bin/config_generate
 
 #Modify OpenWrt Wifi
-set wireless.default_radio${devidx}.encryption=psk2
-set wireless.default_radio${devidx}.key=password
+#set wireless.default_radio${devidx}.encryption=psk2
+#set wireless.default_radio${devidx}.key=password
